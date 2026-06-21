@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Ramam Gems — Coming Soon</title>
-<meta name="description" content="Ramam Gems — fine gemstones &amp; bespoke jewellery. Our new home is being polished. Call or WhatsApp us directly." />
+<title>Ramam Gems — Precious &amp; Semi‑Precious Cut Stones · Coming Soon</title>
+<meta name="description" content="Ramam Gems — precious &amp; semi-precious cut stones. Buying, selling, manufacturing &amp; custom cutting. Our new home is being polished. Call or WhatsApp us directly." />
 <meta name="theme-color" content="#0E1512" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,7 +180,7 @@
     align-items:center;
     gap:12px;
     font-size:11px;
-    letter-spacing:0.26em;
+    letter-spacing:0.22em;
     text-transform:uppercase;
     color: var(--gold);
     margin-bottom: clamp(16px,3vw,22px);
@@ -190,6 +190,32 @@
     width:28px; height:1px;
     background: var(--gold);
     opacity:.8;
+  }
+
+  /* ---------- services index ---------- */
+  .services{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 0 clamp(26px,4vw,34px);
+    padding:0;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color: var(--gold-light);
+  }
+  .services li{
+    padding: 0 16px;
+    position:relative;
+  }
+  .services li:first-child{ padding-left:0; }
+  .services li + li::before{
+    content:"";
+    position:absolute;
+    left:0; top:50%;
+    transform:translateY(-50%);
+    width:1px; height:11px;
+    background: var(--line);
   }
 
   h1{
@@ -207,11 +233,11 @@
   }
 
   p.lede{
-    font-size: clamp(15px, 1.6vw, 18px);
-    line-height:1.7;
+    font-size: clamp(14.5px, 1.5vw, 17px);
+    line-height:1.75;
     color: var(--muted);
-    max-width: 46ch;
-    margin: 0 0 clamp(28px,4vw,36px);
+    max-width: 44ch;
+    margin: 0 0 clamp(22px,3.2vw,28px);
   }
 
   /* ---------- CTAs ---------- */
@@ -227,18 +253,18 @@
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding: 15px 26px;
-    font-size:14px;
-    letter-spacing:0.06em;
+    padding: 14px 24px;
+    font-size:13px;
+    letter-spacing:0.09em;
     text-transform:uppercase;
     text-decoration:none;
-    border-radius: var(--radius);
+    border-radius: 1px;
     border:1px solid transparent;
     cursor:pointer;
     transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
     white-space:nowrap;
   }
-  .btn svg{ width:18px; height:18px; flex:none; }
+  .btn svg{ width:17px; height:17px; flex:none; }
 
   .btn-call{
     background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-dim));
@@ -366,7 +392,7 @@
   <header class="top">
     <div class="wordmark">
       <span class="name">RAMAM&nbsp;GEMS</span>
-      <span class="tag">Fine Gemstones &amp; Jewellery</span>
+      <span class="tag">Precious &amp; Semi‑Precious Cut Stones</span>
     </div>
     <div class="locchip"><strong>Jaipur</strong> · India</div>
   </header>
@@ -415,29 +441,45 @@
           </defs>
 
           <g class="gem-spin">
-            <!-- crown facets: trapezoids between inner table octagon and outer girdle octagon -->
-            <polygon points="160,105 198.9,121.1 262.5,57.5 160,15" fill="url(#faceGold)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="198.9,121.1 215,160 305,160 262.5,57.5" fill="url(#faceRuby)" fill-opacity="0.85" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="215,160 198.9,198.9 262.5,262.5 305,160" fill="url(#faceGoldDim)" fill-opacity="0.85" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="198.9,198.9 160,215 160,305 262.5,262.5" fill="url(#faceEmerald)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="160,215 121.1,198.9 57.5,262.5 160,305" fill="url(#faceGold)" fill-opacity="0.8" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="121.1,198.9 105,160 15,160 57.5,262.5" fill="url(#faceSapphire)" fill-opacity="0.85" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="105,160 121.1,121.1 57.5,57.5 15,160" fill="url(#faceGoldDim)" fill-opacity="0.85" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-            <polygon points="121.1,121.1 160,105 160,15 57.5,57.5" fill="url(#faceEmerald)" fill-opacity="0.8" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
+            <!-- crown facets: 16 triangles (star + kite pattern) between table octagon and girdle octagon, finer cut -->
+            <polygon points="160,105 198.9,121.1 262.5,57.5" fill="url(#faceGold)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="160,105 262.5,57.5 160,15" fill="url(#faceGoldDim)" fill-opacity="0.65" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="198.9,121.1 215,160 305,160" fill="url(#faceRuby)" fill-opacity="0.92" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="198.9,121.1 305,160 262.5,57.5" fill="url(#faceRuby)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="215,160 198.9,198.9 262.5,262.5" fill="url(#faceGoldDim)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="215,160 262.5,262.5 305,160" fill="url(#faceGold)" fill-opacity="0.62" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="198.9,198.9 160,215 160,305" fill="url(#faceEmerald)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="198.9,198.9 160,305 262.5,262.5" fill="url(#faceEmerald)" fill-opacity="0.62" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="160,215 121.1,198.9 57.5,262.5" fill="url(#faceGold)" fill-opacity="0.88" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="160,215 57.5,262.5 160,305" fill="url(#faceGoldDim)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="121.1,198.9 105,160 15,160" fill="url(#faceSapphire)" fill-opacity="0.92" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="121.1,198.9 15,160 57.5,262.5" fill="url(#faceSapphire)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="105,160 121.1,121.1 57.5,57.5" fill="url(#faceGoldDim)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="105,160 57.5,57.5 15,160" fill="url(#faceGold)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+
+            <polygon points="121.1,121.1 160,105 160,15" fill="url(#faceEmerald)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
+            <polygon points="121.1,121.1 160,15 57.5,57.5" fill="url(#faceEmerald)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
 
             <!-- table -->
             <polygon points="160,105 198.9,121.1 215,160 198.9,198.9 160,215 121.1,198.9 105,160 121.1,121.1"
-              fill="url(#tableFill)" stroke="#f6e9bd" stroke-opacity="0.6" stroke-width="1"/>
+              fill="url(#tableFill)" stroke="#f6e9bd" stroke-opacity="0.65" stroke-width="0.75"/>
 
             <!-- girdle outline -->
             <polygon points="160,15 262.5,57.5 305,160 262.5,262.5 160,305 57.5,262.5 15,160 57.5,57.5"
-              fill="none" stroke="#cba135" stroke-opacity="0.45" stroke-width="1"/>
+              fill="none" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
 
-            <!-- specular highlight -->
-            <ellipse cx="140" cy="135" rx="26" ry="13" fill="#ffffff" opacity="0.35" transform="rotate(-28 140 135)"/>
+            <!-- specular highlights -->
+            <ellipse cx="140" cy="135" rx="24" ry="11" fill="#ffffff" opacity="0.38" transform="rotate(-28 140 135)"/>
+            <ellipse cx="183" cy="180" rx="10" ry="5" fill="#ffffff" opacity="0.22" transform="rotate(-28 183 180)"/>
 
             <!-- moving glint sweep -->
-            <rect class="glint" x="-40" y="0" width="60" height="320" fill="url(#glintGrad)" clip-path="url(#gemClip)"/>
+            <rect class="glint" x="-36" y="0" width="46" height="320" fill="url(#glintGrad)" clip-path="url(#gemClip)"/>
           </g>
 
           <!-- sparkles -->
@@ -452,12 +494,20 @@
     </div>
 
     <div class="content">
-      <p class="eyebrow">Certified Gemstones · By Appointment</p>
-      <h1>Being cut.<br>Being set.<br><em>Coming soon.</em></h1>
+      <p class="eyebrow">Cut Stones · Trade &amp; Bespoke</p>
+      <h1>Every facet,<br>considered.<br><em>Coming soon.</em></h1>
       <p class="lede">
-        Our new home for fine gemstones and bespoke jewellery is being polished into shape.
-        Until launch, we're already taking enquiries and orders directly — call or message us on WhatsApp.
+        Ramam Gems deals in precious and semi-precious cut stones — sourced, graded
+        and finished for the trade, designers and collectors alike. Our new home is
+        being polished into shape; until launch, reach us directly.
       </p>
+
+      <ul class="services">
+        <li>Buy</li>
+        <li>Sell</li>
+        <li>Manufacturing</li>
+        <li>Custom Cutting</li>
+      </ul>
 
       <div class="ctas">
         <a class="btn btn-call" href="tel:+919829071015" aria-label="Call Ramam Gems at +91 98290 71015">
@@ -466,7 +516,7 @@
           </svg>
           Call Now
         </a>
-        <a class="btn btn-wa" href="https://wa.me/919829071015?text=Hi%20Ramam%20Gems%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20gemstones%20%26%20jewellery." target="_blank" rel="noopener" aria-label="Message Ramam Gems on WhatsApp">
+        <a class="btn btn-wa" href="https://wa.me/919829071015?text=Hi%20Ramam%20Gems%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20precious%20%26%20semi-precious%20cut%20stones%20(buy%20%2F%20sell%20%2F%20manufacturing)." target="_blank" rel="noopener" aria-label="Message Ramam Gems on WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z"/>
             <path d="M8.5 10.5c.3 2.5 2.5 4.7 5 5"/>
@@ -485,7 +535,7 @@
 
   <footer>
     <span class="seg">Ramam Gems<span class="dot"></span><span id="year"></span></span>
-    <span class="seg">Fine Gemstones &amp; Bespoke Jewellery<span class="dot"></span>Jaipur, India</span>
+    <span class="seg">Precious &amp; Semi‑Precious Cut Stones<span class="dot"></span>Jaipur, India</span>
   </footer>
 
 </div>
@@ -529,30 +579,4 @@
   // gentle mouse-parallax tilt on the gem (desktop, fine pointer, motion allowed)
   (function(){
     var stage = document.querySelector('.gem-stage');
-    var tilt = document.getElementById('gemTilt');
-    if(!stage || !tilt) return;
-
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var finePointer = window.matchMedia('(pointer: fine)').matches;
-    if(reduceMotion || !finePointer) return;
-
-    var bounds;
-    stage.addEventListener('mouseenter', function(){
-      bounds = stage.getBoundingClientRect();
-    });
-    stage.addEventListener('mousemove', function(e){
-      if(!bounds) bounds = stage.getBoundingClientRect();
-      var px = (e.clientX - bounds.left) / bounds.width - 0.5;
-      var py = (e.clientY - bounds.top) / bounds.height - 0.5;
-      var rotY = px * 18;
-      var rotX = py * -18;
-      tilt.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
-    });
-    stage.addEventListener('mouseleave', function(){
-      tilt.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    });
-  })();
-</script>
-
-</body>
-</html>
+    var tilt = document.getElementById(
