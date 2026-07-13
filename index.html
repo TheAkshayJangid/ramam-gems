@@ -1,582 +1,1119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Ramam Gems — Precious &amp; Semi‑Precious Cut Stones · Coming Soon</title>
-<meta name="description" content="Ramam Gems — precious &amp; semi-precious cut stones. Buying, selling, manufacturing &amp; custom cutting. Our new home is being polished. Call or WhatsApp us directly." />
-<meta name="theme-color" content="#0E1512" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0c1210;
-    --ink-2:#121b16;
-    --ink-3:#0a0f0d;
-    --gold:#cba135;
-    --gold-light:#ecd99a;
-    --gold-dim:#8a722a;
-    --ivory:#f4efe2;
-    --muted:#a9b3a8;
-    --emerald:#1c6b4f;
-    --emerald-deep:#0c3a2a;
-    --ruby:#8e2a3c;
-    --sapphire:#284f82;
-    --line: rgba(203,161,53,0.28);
-    --radius: 2px;
-    --ease: cubic-bezier(.22,.61,.36,1);
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  *{ box-sizing: border-box; }
-  html{ -webkit-text-size-adjust: 100%; }
+  <!-- Primary SEO -->
+  <title>Ramam Gems | Precious & Semi-Precious Gemstones – Jaipur, Rajasthan</title>
+  <meta name="description"
+    content="Ramam Gems – 30+ years of excellence in precious and semi-precious gemstones. Trusted by national and international clients. Based in Jaipur, Rajasthan. Owner: Murari Lal Sharma." />
+  <meta name="keywords"
+    content="gemstones jaipur, precious gemstones, semi-precious stones, ruby emerald sapphire, Ramam Gems, Murari Lal Sharma, gemstone supplier India, gemstone exporter jaipur" />
+  <meta name="author" content="Ramam Gems – Murari Lal Sharma" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ramamgems.com/" />
 
-  body{
-    margin:0;
-    min-height:100svh;
-    background:
-      radial-gradient(120% 90% at 82% 8%, rgba(203,161,53,0.10), transparent 55%),
-      radial-gradient(90% 70% at 12% 95%, rgba(28,107,79,0.16), transparent 60%),
-      linear-gradient(180deg, var(--ink-3), var(--ink) 40%, var(--ink-2));
-    color: var(--ivory);
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    overflow-x:hidden;
-    position:relative;
-  }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ramam Gems" />
+  <meta property="og:title" content="Ramam Gems | Premium Gemstone Supplier – Jaipur" />
+  <meta property="og:description"
+    content="30+ Years of Excellence in Precious & Semi-Precious Gemstones. National & International Supply." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://ramamgems.com/" />
 
-  /* faint diagonal hairline texture, like cut lines on a facet table */
-  body::before{
-    content:"";
-    position:fixed; inset:0;
-    background-image: repeating-linear-gradient(
-      115deg,
-      rgba(244,239,226,0.025) 0px,
-      rgba(244,239,226,0.025) 1px,
-      transparent 1px,
-      transparent 86px
-    );
-    pointer-events:none;
-    z-index:0;
-  }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ramam Gems | Premium Gemstones Jaipur" />
+  <meta name="twitter:description" content="30+ Years of Excellence. Precious & Semi-Precious Gemstones." />
+  <meta name="twitter:image" content="images/logo.png" />
 
-  .vignette{
-    position:fixed; inset:0;
-    box-shadow: inset 0 0 18vw rgba(0,0,0,0.55);
-    pointer-events:none;
-    z-index:1;
-  }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon/favicon.png" />
+  <link rel="apple-touch-icon" href="favicon/favicon.png" />
 
-  a{ color:inherit; }
-  button{ font-family:inherit; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-  .wrap{
-    position:relative;
-    z-index:2;
-    min-height:100svh;
-    display:flex;
-    flex-direction:column;
-    max-width:1180px;
-    margin:0 auto;
-    padding: clamp(20px, 4vw, 48px) clamp(20px, 6vw, 64px);
-  }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  /* ---------- header ---------- */
-  header.top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    padding-bottom: clamp(16px, 3vw, 28px);
-    border-bottom: 1px solid var(--line);
-    opacity:0;
-    animation: fadeUp .9s var(--ease) .15s forwards;
-  }
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 
-  .wordmark{
-    display:flex;
-    flex-direction:column;
-    gap:2px;
-    line-height:1;
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ramam Gems",
+    "description": "Premium precious and semi-precious gemstone supplier with 30+ years of experience.",
+    "url": "https://ramamgems.com",
+    "telephone": "+919829071015",
+    "email": "gemsstone121@gmail.com",
+    "founder": { "@type": "Person", "name": "Murari Lal Sharma" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C-106, Goverdhanpuri, Galta Gate",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "302003",
+      "addressCountry": "IN"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 26.9153, "longitude": 75.8477 },
+    "openingHours": "Mo-Sa 10:00-19:00",
+    "priceRange": "$$"
   }
-  .wordmark .name{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size: clamp(20px, 2.6vw, 26px);
-    letter-spacing:0.16em;
-    color: var(--gold-light);
-  }
-  .wordmark .tag{
-    font-size:10px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color: var(--muted);
-  }
-
-  .locchip{
-    font-size:11px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color: var(--muted);
-    border:1px solid var(--line);
-    padding:7px 14px;
-    border-radius:999px;
-    white-space:nowrap;
-  }
-  .locchip strong{ color: var(--gold-light); font-weight:500; }
-
-  /* ---------- hero ---------- */
-  main{
-    flex:1;
-    display:grid;
-    grid-template-columns: 1fr;
-    align-items:center;
-    gap: clamp(28px, 6vw, 50px);
-    padding: clamp(36px, 8vw, 64px) 0;
-  }
-
-  .gem-stage{
-    order:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    perspective: 900px;
-    opacity:0;
-    animation: fadeUp 1s var(--ease) .05s forwards;
-  }
-
-  .gem-tilt{
-    width:min(64vw, 330px);
-    transform-style:preserve-3d;
-    transition: transform .35s var(--ease);
-    filter: drop-shadow(0 18px 40px rgba(0,0,0,0.55)) drop-shadow(0 0 38px rgba(203,161,53,0.10));
-  }
-
-  .gem-spin{
-    transform-origin:160px 160px;
-    animation: spin 64s linear infinite;
-  }
-
-  .glint{
-    animation: sweep 7s ease-in-out infinite;
-  }
-
-  .sparkle{
-    transform-origin:center;
-    animation: twinkle 3.4s ease-in-out infinite;
-  }
-  .sparkle.s2{ animation-delay:.9s; }
-  .sparkle.s3{ animation-delay:1.8s; }
-  .sparkle.s4{ animation-delay:2.4s; }
-
-  .content{
-    order:2;
-    opacity:0;
-    animation: fadeUp 1s var(--ease) .25s forwards;
-  }
-
-  .eyebrow{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:11px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color: var(--gold);
-    margin-bottom: clamp(16px,3vw,22px);
-  }
-  .eyebrow::before{
-    content:"";
-    width:28px; height:1px;
-    background: var(--gold);
-    opacity:.8;
-  }
-
-  /* ---------- services index ---------- */
-  .services{
-    list-style:none;
-    display:flex;
-    flex-wrap:wrap;
-    margin: 0 0 clamp(26px,4vw,34px);
-    padding:0;
-    font-size:11px;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    color: var(--gold-light);
-  }
-  .services li{
-    padding: 0 16px;
-    position:relative;
-  }
-  .services li:first-child{ padding-left:0; }
-  .services li + li::before{
-    content:"";
-    position:absolute;
-    left:0; top:50%;
-    transform:translateY(-50%);
-    width:1px; height:11px;
-    background: var(--line);
-  }
-
-  h1{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size: clamp(34px, 6.2vw, 66px);
-    line-height:1.05;
-    margin: 0 0 18px;
-    letter-spacing:0.005em;
-  }
-  h1 em{
-    font-style:italic;
-    font-weight:500;
-    color: var(--gold-light);
-  }
-
-  p.lede{
-    font-size: clamp(14.5px, 1.5vw, 17px);
-    line-height:1.75;
-    color: var(--muted);
-    max-width: 44ch;
-    margin: 0 0 clamp(22px,3.2vw,28px);
-  }
-
-  /* ---------- CTAs ---------- */
-  .ctas{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-bottom: clamp(28px, 4vw, 36px);
-  }
-
-  .btn{
-    position:relative;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding: 14px 24px;
-    font-size:13px;
-    letter-spacing:0.09em;
-    text-transform:uppercase;
-    text-decoration:none;
-    border-radius: 1px;
-    border:1px solid transparent;
-    cursor:pointer;
-    transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
-    white-space:nowrap;
-  }
-  .btn svg{ width:17px; height:17px; flex:none; }
-
-  .btn-call{
-    background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-dim));
-    color:#16140a;
-    font-weight:500;
-    box-shadow: 0 10px 26px -10px rgba(203,161,53,0.55);
-  }
-  .btn-call:hover{ transform: translateY(-2px); box-shadow: 0 16px 32px -10px rgba(203,161,53,0.65); }
-  .btn-call:active{ transform: translateY(0); }
-
-  .btn-wa{
-    background: rgba(37,127,89,0.14);
-    border-color: rgba(96,189,140,0.45);
-    color: var(--ivory);
-    font-weight:400;
-  }
-  .btn-wa:hover{
-    background: rgba(37,127,89,0.26);
-    border-color: rgba(96,189,140,0.7);
-    transform: translateY(-2px);
-  }
-  .btn-wa:active{ transform: translateY(0); }
-
-  .btn:focus-visible{
-    outline: 2px solid var(--gold-light);
-    outline-offset: 3px;
-  }
-
-  .phone-line{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:13px;
-    color: var(--muted);
-  }
-  .phone-line .num{
-    color: var(--ivory);
-    letter-spacing:0.04em;
-    font-variant-numeric: tabular-nums;
-  }
-  .copy-btn{
-    background:none;
-    border:1px solid var(--line);
-    color: var(--muted);
-    font-size:10px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    padding:5px 10px;
-    border-radius:999px;
-    cursor:pointer;
-    transition: border-color .2s ease, color .2s ease;
-  }
-  .copy-btn:hover{ border-color: var(--gold); color: var(--gold-light); }
-  .copy-btn:focus-visible{ outline:2px solid var(--gold-light); outline-offset:2px; }
-
-  /* ---------- footer ---------- */
-  footer{
-    border-top:1px solid var(--line);
-    padding-top: clamp(16px, 3vw, 22px);
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px 24px;
-    align-items:center;
-    justify-content:space-between;
-    font-size:11px;
-    letter-spacing:0.08em;
-    color: var(--muted);
-    opacity:0;
-    animation: fadeUp 1s var(--ease) .4s forwards;
-  }
-  footer .seg{ display:flex; align-items:center; gap:8px; }
-  footer .dot{ width:3px; height:3px; border-radius:50%; background: var(--gold-dim); }
-
-  /* ---------- keyframes ---------- */
-  @keyframes fadeUp{
-    from{ opacity:0; transform: translateY(14px); }
-    to{ opacity:1; transform: translateY(0); }
-  }
-  @keyframes spin{
-    from{ transform: rotate(0deg); }
-    to{ transform: rotate(360deg); }
-  }
-  @keyframes sweep{
-    0%{ transform: translateX(-140px); opacity:0; }
-    8%{ opacity:.55; }
-    50%{ transform: translateX(140px); opacity:.15; }
-    58%{ opacity:0; }
-    100%{ transform: translateX(140px); opacity:0; }
-  }
-  @keyframes twinkle{
-    0%, 100%{ opacity:0; transform: scale(.4); }
-    50%{ opacity:1; transform: scale(1); }
-  }
-
-  /* ---------- layout: desktop ---------- */
-  @media (min-width: 880px){
-    main{
-      grid-template-columns: 1.05fr 0.95fr;
-    }
-    .gem-stage{ order:2; }
-    .content{ order:1; }
-    .ctas{ flex-wrap:nowrap; }
-  }
-
-  @media (max-width: 420px){
-    .btn{ flex:1 1 auto; justify-content:center; }
-    .ctas{ flex-direction:column; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .gem-spin{ animation:none; }
-    .glint{ animation:none; opacity:.18; }
-    .sparkle{ animation:none; opacity:.5; }
-    header.top, .gem-stage, .content, footer{ animation:none; opacity:1; }
-    .btn, .gem-tilt{ transition:none; }
-  }
-</style>
+  </script>
 </head>
-<body>
 
-<div class="vignette"></div>
+<body class="loading">
 
-<div class="wrap">
+  <!-- ═══════════════════════════════════════
+     SCROLL PROGRESS BAR
+═══════════════════════════════════════ -->
+  <div id="scrollProgress" class="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
 
-  <header class="top">
-    <div class="wordmark">
-      <span class="name">RAMAM&nbsp;GEMS</span>
-      <span class="tag">Precious &amp; Semi‑Precious Cut Stones</span>
+  <!-- ═══════════════════════════════════════
+     LOADER
+═══════════════════════════════════════ -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-gem">
+        <img src="favicon/favicon.png" alt="Ramam Gems" class="loader-logo-img" />
+        <div class="loader-rings">
+          <div class="loader-ring ring-1"></div>
+          <div class="loader-ring ring-2"></div>
+          <div class="loader-ring ring-3"></div>
+        </div>
+      </div>
+      <div class="loader-brand">
+        <span class="loader-brand-text">RAMAM GEMS</span>
+        <span class="loader-tagline-text">Excellence Since 1990</span>
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill" id="loaderFill"></div>
+      </div>
     </div>
-    <div class="locchip"><strong>Jaipur</strong> · India</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Ramam Gems Home">
+        <img src="logo/logo.png" alt="Ramam Gems" class="nav-logo-img" loading="eager" />
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#products" class="nav-link" data-section="products">Products</a></li>
+          <li><a href="#why-us" class="nav-link" data-section="why-us">Why Us</a></li>
+          <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+          <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+          <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn-nav-cta">Get Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
-  <main>
-    <div class="gem-stage" aria-hidden="true">
-      <div class="gem-tilt" id="gemTilt">
-        <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="tableFill" cx="38%" cy="32%" r="75%">
-              <stop offset="0%" stop-color="#f6e9bd" stop-opacity="0.95"/>
-              <stop offset="45%" stop-color="#cba135" stop-opacity="0.75"/>
-              <stop offset="100%" stop-color="#6f5a1f" stop-opacity="0.55"/>
-            </radialGradient>
-
-            <linearGradient id="faceGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#e8d08a"/>
-              <stop offset="100%" stop-color="#8a722a"/>
-            </linearGradient>
-            <linearGradient id="faceGoldDim" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#7a6526"/>
-              <stop offset="100%" stop-color="#cba135"/>
-            </linearGradient>
-            <linearGradient id="faceEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#2c8a64"/>
-              <stop offset="100%" stop-color="#0c3a2a"/>
-            </linearGradient>
-            <linearGradient id="faceRuby" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#b8475c"/>
-              <stop offset="100%" stop-color="#5c1c27"/>
-            </linearGradient>
-            <linearGradient id="faceSapphire" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#4877bb"/>
-              <stop offset="100%" stop-color="#1c3354"/>
-            </linearGradient>
-
-            <linearGradient id="glintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-            </linearGradient>
-
-            <clipPath id="gemClip">
-              <polygon points="160,15 262.5,57.5 305,160 262.5,262.5 160,305 57.5,262.5 15,160 57.5,57.5"/>
-            </clipPath>
-          </defs>
-
-          <g class="gem-spin">
-            <!-- crown facets: 16 triangles (star + kite pattern) between table octagon and girdle octagon, finer cut -->
-            <polygon points="160,105 198.9,121.1 262.5,57.5" fill="url(#faceGold)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="160,105 262.5,57.5 160,15" fill="url(#faceGoldDim)" fill-opacity="0.65" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="198.9,121.1 215,160 305,160" fill="url(#faceRuby)" fill-opacity="0.92" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="198.9,121.1 305,160 262.5,57.5" fill="url(#faceRuby)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="215,160 198.9,198.9 262.5,262.5" fill="url(#faceGoldDim)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="215,160 262.5,262.5 305,160" fill="url(#faceGold)" fill-opacity="0.62" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="198.9,198.9 160,215 160,305" fill="url(#faceEmerald)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="198.9,198.9 160,305 262.5,262.5" fill="url(#faceEmerald)" fill-opacity="0.62" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="160,215 121.1,198.9 57.5,262.5" fill="url(#faceGold)" fill-opacity="0.88" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="160,215 57.5,262.5 160,305" fill="url(#faceGoldDim)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="121.1,198.9 105,160 15,160" fill="url(#faceSapphire)" fill-opacity="0.92" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="121.1,198.9 15,160 57.5,262.5" fill="url(#faceSapphire)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="105,160 121.1,121.1 57.5,57.5" fill="url(#faceGoldDim)" fill-opacity="0.9" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="105,160 57.5,57.5 15,160" fill="url(#faceGold)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <polygon points="121.1,121.1 160,105 160,15" fill="url(#faceEmerald)" fill-opacity="0.95" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-            <polygon points="121.1,121.1 160,15 57.5,57.5" fill="url(#faceEmerald)" fill-opacity="0.6" stroke="#cba135" stroke-opacity="0.55" stroke-width="0.5"/>
-
-            <!-- table -->
-            <polygon points="160,105 198.9,121.1 215,160 198.9,198.9 160,215 121.1,198.9 105,160 121.1,121.1"
-              fill="url(#tableFill)" stroke="#f6e9bd" stroke-opacity="0.65" stroke-width="0.75"/>
-
-            <!-- girdle outline -->
-            <polygon points="160,15 262.5,57.5 305,160 262.5,262.5 160,305 57.5,262.5 15,160 57.5,57.5"
-              fill="none" stroke="#cba135" stroke-opacity="0.5" stroke-width="0.75"/>
-
-            <!-- specular highlights -->
-            <ellipse cx="140" cy="135" rx="24" ry="11" fill="#ffffff" opacity="0.38" transform="rotate(-28 140 135)"/>
-            <ellipse cx="183" cy="180" rx="10" ry="5" fill="#ffffff" opacity="0.22" transform="rotate(-28 183 180)"/>
-
-            <!-- moving glint sweep -->
-            <rect class="glint" x="-36" y="0" width="46" height="320" fill="url(#glintGrad)" clip-path="url(#gemClip)"/>
-          </g>
-
-          <!-- sparkles -->
-          <g fill="#f6e9bd">
-            <path class="sparkle s1" d="M44 70 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z"/>
-            <path class="sparkle s2" d="M286 96 l2.4 7 7 2.4 -7 2.4 -2.4 7 -2.4 -7 -7 -2.4 7 -2.4 z"/>
-            <path class="sparkle s3" d="M268 250 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z"/>
-            <path class="sparkle s4" d="M58 244 l2.4 7 7 2.4 -7 2.4 -2.4 7 -2.4 -7 -7 -2.4 7 -2.4 z"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-
-    <div class="content">
-      <p class="eyebrow">Cut Stones · Trade &amp; Bespoke</p>
-      <h1>Every facet,<br>considered.<br><em>Coming soon.</em></h1>
-      <p class="lede">
-        Ramam Gems deals in precious and semi-precious cut stones — sourced, graded
-        and finished for the trade, designers and collectors alike. Our new home is
-        being polished into shape; until launch, reach us directly.
-      </p>
-
-      <ul class="services">
-        <li>Buy</li>
-        <li>Sell</li>
-        <li>Manufacturing</li>
-        <li>Custom Cutting</li>
-      </ul>
-
-      <div class="ctas">
-        <a class="btn btn-call" href="tel:+919829071015" aria-label="Call Ramam Gems at +91 98290 71015">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
-          </svg>
-          Call Now
-        </a>
-        <a class="btn btn-wa" href="https://wa.me/919829071015?text=Hi%20Ramam%20Gems%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20precious%20%26%20semi-precious%20cut%20stones%20(buy%20%2F%20sell%20%2F%20manufacturing)." target="_blank" rel="noopener" aria-label="Message Ramam Gems on WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z"/>
-            <path d="M8.5 10.5c.3 2.5 2.5 4.7 5 5"/>
-          </svg>
-          WhatsApp Us
-        </a>
+  <!-- ═══════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════ -->
+  <main id="main-content">
+    <section id="home" class="hero" aria-label="Hero">
+      <!-- Animated background layers -->
+      <div class="hero-bg">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-bg-mesh"></div>
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
       </div>
 
-      <div class="phone-line">
-        <span>Direct line:</span>
-        <span class="num" id="phoneNum">+91 98290 71015</span>
-        <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+      <!-- Floating gem orbs -->
+      <div class="hero-orbs" aria-hidden="true">
+        <div class="orb orb-ruby"><i class="fas fa-gem"></i></div>
+        <div class="orb orb-sapphire"><i class="fas fa-diamond"></i></div>
+        <div class="orb orb-emerald"><i class="fas fa-gem"></i></div>
+        <div class="orb orb-amethyst"><i class="fas fa-star"></i></div>
+        <div class="orb orb-gold"><i class="fas fa-circle"></i></div>
       </div>
-    </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content" id="heroContent">
+        <div class="hero-badge reveal-up">
+          <i class="fas fa-award"></i>
+          <span>Trusted Since 1990 · Jaipur, Rajasthan</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-line reveal-up" data-delay="100">Where Every Stone</span>
+          <span class="hero-title-line hero-title-gold reveal-up" data-delay="250">Tells a Story</span>
+        </h1>
+        <p class="hero-tagline reveal-up" data-delay="400">
+          30+ Years of Excellence in Precious &amp; Semi-Precious Gemstones
+        </p>
+        <p class="hero-sub reveal-up" data-delay="550">
+          Premium gemstone sourcing &amp; supply for national and international clients.<br />
+          100+ varieties · Expert consultation · Certified quality
+        </p>
+        <div class="hero-cta reveal-up" data-delay="700">
+          <a href="#contact" class="btn-primary ripple">
+            <i class="fas fa-envelope"></i> Contact Us
+          </a>
+          <a href="https://wa.me/919829071015" target="_blank" rel="noopener noreferrer" class="btn-whatsapp ripple">
+            <i class="fab fa-whatsapp"></i> WhatsApp Now
+          </a>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats reveal-up" data-delay="850">
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="30" data-suffix="+">0</span>
+            <span class="hero-stat-label">Years Experience</span>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="100" data-suffix="+">0</span>
+            <span class="hero-stat-label">Gemstone Varieties</span>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-count="500" data-suffix="+">0</span>
+            <span class="hero-stat-label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     ABOUT SECTION
+═══════════════════════════════════════ -->
+    <section id="about" class="section about" aria-label="About Ramam Gems">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-gem"></i> Our Legacy</div>
+        <h2 class="section-title reveal-up">About <span class="text-gold">Ramam Gems</span></h2>
+        <div class="section-divider reveal-up"></div>
+
+        <div class="about-grid">
+          <!-- Visual -->
+          <div class="about-visual reveal-left">
+            <div class="about-card-wrap">
+              <div class="about-gem-display">
+                <div class="gem-center-wrap">
+                  <img src="favicon/favicon.png" alt="Ramam Gems emblem" class="gem-center-img" loading="lazy" />
+                  <div class="gem-pulse-ring r1"></div>
+                  <div class="gem-pulse-ring r2"></div>
+                  <div class="gem-pulse-ring r3"></div>
+                </div>
+                <div class="gem-orbit gem-orbit-ruby"><span class="gem-dot ruby-dot"><i class="fas fa-gem"></i></span>
+                </div>
+                <div class="gem-orbit gem-orbit-emerald"><span class="gem-dot emerald-dot"><i
+                      class="fas fa-gem"></i></span></div>
+                <div class="gem-orbit gem-orbit-sapphire"><span class="gem-dot sapphire-dot"><i
+                      class="fas fa-diamond"></i></span></div>
+              </div>
+              <div class="about-exp-badge">
+                <span class="exp-number">30+</span>
+                <span class="exp-text">Years of<br />Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content reveal-right">
+            <h3 class="about-heading">Crafting Trust, <span class="text-gold">One Gem at a Time</span></h3>
+            <p class="about-text">
+              Founded with an unwavering passion for authentic gemstones, <strong>Ramam Gems</strong> has been a
+              cornerstone of the gemstone industry for over three decades. Under the expert guidance of <strong>Murari
+                Lal Sharma</strong>, we have built an enduring legacy of quality, transparency, and absolute client
+              satisfaction.
+            </p>
+            <p class="about-text">
+              Headquartered in the <strong>Gem Capital of India — Jaipur, Rajasthan</strong>, we specialize in sourcing,
+              trading, and supplying both precious and semi-precious gemstones to discerning clients across India and
+              globally.
+            </p>
+
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                <div><strong>Direct mine sourcing</strong>
+                  <p>Premium stones sourced directly from global mines</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                <div><strong>Certified quality</strong>
+                  <p>Authenticated gemstones with proper documentation</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="feature-icon"><i class="fas fa-globe-asia"></i></div>
+                <div><strong>Global network</strong>
+                  <p>Serving national &amp; international clients for 30+ years</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="feature-icon"><i class="fas fa-cut"></i></div>
+                <div><strong>Custom solutions</strong>
+                  <p>Bespoke gemstone sourcing for designers &amp; jewellers</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-owner-card">
+              <div class="owner-avatar"><i class="fas fa-user-tie"></i></div>
+              <div class="owner-details">
+                <strong>Murari Lal Sharma</strong>
+                <span>Founder &amp; Owner · Ramam Gems</span>
+                <span class="owner-exp">30+ Years Industry Expert · Jaipur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     PRODUCTS SECTION
+═══════════════════════════════════════ -->
+    <section id="products" class="section products dark-section" aria-label="Products and Services">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-layer-group"></i> What We Offer</div>
+        <h2 class="section-title reveal-up">Products &amp; <span class="text-gold">Services</span></h2>
+        <div class="section-divider reveal-up"></div>
+        <p class="section-subtitle reveal-up">From rare precious stones to custom bulk orders — excellence at every
+          scale.</p>
+
+        <div class="products-grid">
+          <div class="product-card glass-card reveal-up" data-delay="0">
+            <div class="product-card-glow glow-ruby"></div>
+            <div class="product-icon-box icon-ruby"><i class="fas fa-gem"></i></div>
+            <h3>Precious Gemstones</h3>
+            <p>Diamonds, Rubies, Emeralds, Sapphires — sourced for authenticity and certified quality.</p>
+            <ul class="product-gems">
+              <li><span class="gem-dot-sm ruby-sm"></span>Ruby (Manik)</li>
+              <li><span class="gem-dot-sm emerald-sm"></span>Emerald (Panna)</li>
+              <li><span class="gem-dot-sm sapphire-sm"></span>Blue Sapphire (Neelam)</li>
+              <li><span class="gem-dot-sm gold-sm"></span>Yellow Sapphire (Pukhraj)</li>
+            </ul>
+            <a href="#contact" class="card-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="product-card glass-card reveal-up" data-delay="100">
+            <div class="product-card-glow glow-amethyst"></div>
+            <div class="product-icon-box icon-amethyst"><i class="fas fa-diamond"></i></div>
+            <h3>Semi-Precious Gemstones</h3>
+            <p>An extensive range for jewellery, healing, and astrological purposes.</p>
+            <ul class="product-gems">
+              <li><span class="gem-dot-sm amethyst-sm"></span>Amethyst &amp; Turquoise</li>
+              <li><span class="gem-dot-sm opal-sm"></span>Opal &amp; Moonstone</li>
+              <li><span class="gem-dot-sm garnet-sm"></span>Garnet &amp; Citrine</li>
+              <li><span class="gem-dot-sm aqua-sm"></span>Aquamarine &amp; Labradorite</li>
+            </ul>
+            <a href="#contact" class="card-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="product-card glass-card reveal-up" data-delay="200">
+            <div class="product-card-glow glow-gold"></div>
+            <div class="product-icon-box icon-gold"><i class="fas fa-cut"></i></div>
+            <h3>Custom Stone Solutions</h3>
+            <p>Bespoke shaping, calibration and matched sets per your exact specifications.</p>
+            <ul class="product-gems">
+              <li><span class="gem-dot-sm gold-sm"></span>Custom cuts &amp; calibrations</li>
+              <li><span class="gem-dot-sm gold-sm"></span>Matched gemstone sets</li>
+              <li><span class="gem-dot-sm gold-sm"></span>Designer collection support</li>
+              <li><span class="gem-dot-sm gold-sm"></span>Lab &amp; natural stone options</li>
+            </ul>
+            <a href="#contact" class="card-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="product-card glass-card reveal-up" data-delay="300">
+            <div class="product-card-glow glow-blue"></div>
+            <div class="product-icon-box icon-blue"><i class="fas fa-boxes-stacked"></i></div>
+            <h3>Bulk Orders</h3>
+            <p>Competitive pricing and reliable supply for manufacturers, retailers and exporters.</p>
+            <ul class="product-gems">
+              <li><span class="gem-dot-sm sapphire-sm"></span>Factory &amp; wholesale supply</li>
+              <li><span class="gem-dot-sm sapphire-sm"></span>Consistent quality batches</li>
+              <li><span class="gem-dot-sm sapphire-sm"></span>Flexible payment terms</li>
+              <li><span class="gem-dot-sm sapphire-sm"></span>Timely delivery guaranteed</li>
+            </ul>
+            <a href="#contact" class="card-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="product-card glass-card reveal-up" data-delay="400">
+            <div class="product-card-glow glow-emerald"></div>
+            <div class="product-icon-box icon-emerald"><i class="fas fa-globe"></i></div>
+            <h3>International Supply</h3>
+            <p>Experienced in exporting to global markets with full documentation &amp; compliance.</p>
+            <ul class="product-gems">
+              <li><span class="gem-dot-sm emerald-sm"></span>Export documentation support</li>
+              <li><span class="gem-dot-sm emerald-sm"></span>Worldwide secure shipping</li>
+              <li><span class="gem-dot-sm emerald-sm"></span>International quality standards</li>
+              <li><span class="gem-dot-sm emerald-sm"></span>Trusted global partnerships</li>
+            </ul>
+            <a href="#contact" class="card-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="product-card product-card-cta glass-card reveal-up" data-delay="500">
+            <div class="product-card-glow glow-gold"></div>
+            <i class="fas fa-gem product-cta-icon"></i>
+            <h3>Looking for Something Specific?</h3>
+            <p>With 100+ varieties, we source almost any gemstone you need. Reach out directly.</p>
+            <a href="#contact" class="btn-primary ripple" style="margin-top:16px">Contact Us Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════ -->
+    <section id="why-us" class="section why-us" aria-label="Why Choose Ramam Gems">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-award"></i> Why Ramam Gems</div>
+        <h2 class="section-title reveal-up">Why <span class="text-gold">Choose Us</span></h2>
+        <div class="section-divider reveal-up"></div>
+
+        <div class="why-grid">
+          <div class="why-card glass-card reveal-up" data-delay="0">
+            <div class="why-icon-wrap"><i class="fas fa-history"></i></div>
+            <h3>30+ Years Experience</h3>
+            <p>A legacy since 1990. Deep industry expertise ensures the best guidance on every purchase.</p>
+          </div>
+          <div class="why-card glass-card reveal-up" data-delay="100">
+            <div class="why-icon-wrap"><i class="fas fa-gem"></i></div>
+            <h3>100+ Stone Varieties</h3>
+            <p>From rare collector gems to everyday semi-precious stones — unmatched inventory.</p>
+          </div>
+          <div class="why-card glass-card reveal-up" data-delay="200">
+            <div class="why-icon-wrap"><i class="fas fa-handshake"></i></div>
+            <h3>Trusted by Clients</h3>
+            <p>Thousands of satisfied clients from individual buyers to large corporations globally.</p>
+          </div>
+          <div class="why-card glass-card reveal-up" data-delay="300">
+            <div class="why-icon-wrap"><i class="fas fa-globe-asia"></i></div>
+            <h3>National &amp; International</h3>
+            <p>Seamless export services with full adherence to international quality standards.</p>
+          </div>
+          <div class="why-card glass-card reveal-up" data-delay="400">
+            <div class="why-icon-wrap"><i class="fas fa-certificate"></i></div>
+            <h3>Certified Gemstones</h3>
+            <p>All stones come with certifications and documentation — authenticity guaranteed.</p>
+          </div>
+          <div class="why-card glass-card reveal-up" data-delay="500">
+            <div class="why-icon-wrap"><i class="fas fa-headset"></i></div>
+            <h3>Expert Consultation</h3>
+            <p>Personalised advice from Murari Lal Sharma — a seasoned expert who knows your needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     STATISTICS COUNTER
+═══════════════════════════════════════ -->
+    <section class="stats-section dark-section" aria-label="Company statistics">
+      <div class="stats-bg-pattern" aria-hidden="true"></div>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-up" data-delay="0">
+            <div class="stat-icon"><i class="fas fa-history"></i></div>
+            <div class="stat-number" data-target="30" data-suffix="+">0</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-item reveal-up" data-delay="100">
+            <div class="stat-icon"><i class="fas fa-gem"></i></div>
+            <div class="stat-number" data-target="100" data-suffix="+">0</div>
+            <div class="stat-label">Stone Varieties</div>
+          </div>
+          <div class="stat-item reveal-up" data-delay="200">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-number" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item reveal-up" data-delay="300">
+            <div class="stat-icon"><i class="fas fa-globe"></i></div>
+            <div class="stat-number" data-target="20" data-suffix="+">0</div>
+            <div class="stat-label">Countries Served</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     GALLERY SECTION
+═══════════════════════════════════════ -->
+    <section id="gallery" class="section gallery" aria-label="Gemstone Gallery">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-images"></i> Our Collection</div>
+        <h2 class="section-title reveal-up">Gemstone <span class="text-gold">Gallery</span></h2>
+        <div class="section-divider reveal-up"></div>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters reveal-up">
+          <button class="filter-btn active" data-filter="all">All Gems</button>
+          <button class="filter-btn" data-filter="precious">Precious</button>
+          <button class="filter-btn" data-filter="semi">Semi-Precious</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal-up" data-category="precious" data-delay="0">
+            <div class="gallery-card ruby-card">
+              <div class="gallery-gem-icon"><i class="fas fa-gem"></i></div>
+              <div class="gallery-info">
+                <h4>Ruby</h4>
+                <p>Precious · Manik</p>
+                <span class="gallery-tag">Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item reveal-up" data-category="precious" data-delay="50">
+            <div class="gallery-card emerald-card">
+              <div class="gallery-gem-icon"><i class="fas fa-gem"></i></div>
+              <div class="gallery-info">
+                <h4>Emerald</h4>
+                <p>Precious · Panna</p>
+                <span class="gallery-tag">Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item gallery-item-wide reveal-up" data-category="precious" data-delay="100">
+            <div class="gallery-card sapphire-card">
+              <div class="gallery-gem-icon"><i class="fas fa-diamond"></i></div>
+              <div class="gallery-info">
+                <h4>Blue Sapphire</h4>
+                <p>Precious · Neelam</p>
+                <span class="gallery-tag">Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item gallery-item-tall reveal-up" data-category="semi" data-delay="150">
+            <div class="gallery-card amethyst-card">
+              <div class="gallery-gem-icon"><i class="fas fa-gem"></i></div>
+              <div class="gallery-info">
+                <h4>Amethyst</h4>
+                <p>Semi-Precious</p>
+                <span class="gallery-tag semi-tag">Semi-Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item reveal-up" data-category="precious" data-delay="200">
+            <div class="gallery-card yellow-sapphire-card">
+              <div class="gallery-gem-icon"><i class="fas fa-star"></i></div>
+              <div class="gallery-info">
+                <h4>Yellow Sapphire</h4>
+                <p>Precious · Pukhraj</p>
+                <span class="gallery-tag">Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item reveal-up" data-category="semi" data-delay="250">
+            <div class="gallery-card opal-card">
+              <div class="gallery-gem-icon"><i class="fas fa-circle"></i></div>
+              <div class="gallery-info">
+                <h4>Opal</h4>
+                <p>Semi-Precious</p>
+                <span class="gallery-tag semi-tag">Semi-Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item reveal-up" data-category="semi" data-delay="300">
+            <div class="gallery-card garnet-card">
+              <div class="gallery-gem-icon"><i class="fas fa-gem"></i></div>
+              <div class="gallery-info">
+                <h4>Garnet</h4>
+                <p>Semi-Precious</p>
+                <span class="gallery-tag semi-tag">Semi-Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+          <div class="gallery-item reveal-up" data-category="semi" data-delay="350">
+            <div class="gallery-card turquoise-card">
+              <div class="gallery-gem-icon"><i class="fas fa-gem"></i></div>
+              <div class="gallery-info">
+                <h4>Turquoise</h4>
+                <p>Semi-Precious · Feroza</p>
+                <span class="gallery-tag semi-tag">Semi-Precious</span>
+              </div>
+              <div class="gallery-shine"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-cta reveal-up">
+          <p>Interested in our complete catalogue?</p>
+          <a href="#contact" class="btn-primary ripple">Request Full Catalogue</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════ -->
+    <section id="testimonials" class="section testimonials dark-section" aria-label="Client Testimonials">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-quote-left"></i> Client Words</div>
+        <h2 class="section-title reveal-up">What Our <span class="text-gold">Clients Say</span></h2>
+        <div class="section-divider reveal-up"></div>
+
+        <div class="testimonial-slider reveal-up" id="testimonialSlider">
+          <div class="testimonial-track" id="testimonialTrack">
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Ramam Gems has been our trusted supplier for over 10 years. The quality of
+                  sapphires and emeralds is consistently outstanding. Murari ji's expertise is unmatched in Jaipur.</p>
+                <div class="testimonial-footer">
+                  <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                  <div class="testimonial-author">
+                    <strong>Rajesh Mehta</strong>
+                    <span>Jewellery Manufacturer, Mumbai</span>
+                  </div>
+                  <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">We source semi-precious stones from Ramam Gems for our international orders.
+                  Their professionalism, delivery timelines, and stone quality are absolutely top-notch.</p>
+                <div class="testimonial-footer">
+                  <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                  <div class="testimonial-author">
+                    <strong>Priya Nair</strong>
+                    <span>Gemstone Exporter, Bangalore</span>
+                  </div>
+                  <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">I visited Ramam Gems for astrological stones and was amazed by the variety
+                  and authenticity. Murari Lal Sharma guided me personally. Highly recommended to everyone!</p>
+                <div class="testimonial-footer">
+                  <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                  <div class="testimonial-author">
+                    <strong>Amit Verma</strong>
+                    <span>Individual Client, New Delhi</span>
+                  </div>
+                  <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">As an international buyer, finding a reliable Indian gemstone supplier was
+                  challenging. Ramam Gems exceeded every expectation — quality, communication, and pricing are all
+                  perfect.</p>
+                <div class="testimonial-footer">
+                  <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                  <div class="testimonial-author">
+                    <strong>Ahmed Al-Rashid</strong>
+                    <span>Gem Dealer, Dubai</span>
+                  </div>
+                  <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card glass-card">
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Bulk orders delivered on time with zero compromise on quality. Ramam Gems is
+                  our go-to partner for all gemstone requirements. A fantastic experience every single time!</p>
+                <div class="testimonial-footer">
+                  <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                  <div class="testimonial-author">
+                    <strong>Sunita Agarwal</strong>
+                    <span>Retail Jeweller, Jaipur</span>
+                  </div>
+                  <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-arrow" id="sliderPrev" aria-label="Previous testimonial"><i
+                class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonial navigation"></div>
+            <button class="slider-arrow" id="sliderNext" aria-label="Next testimonial"><i
+                class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     FAQ SECTION
+═══════════════════════════════════════ -->
+    <section id="faq" class="section faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-circle-question"></i> Common Questions</div>
+        <h2 class="section-title reveal-up">Frequently <span class="text-gold">Asked Questions</span></h2>
+        <div class="section-divider reveal-up"></div>
+
+        <div class="faq-grid">
+          <div class="faq-item reveal-up" data-delay="0">
+            <button class="faq-question" aria-expanded="false">
+              <span>What types of gemstones does Ramam Gems supply?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We supply a wide range of precious gemstones including Ruby, Emerald, Blue Sapphire, Yellow Sapphire,
+                and Diamond. We also stock 100+ varieties of semi-precious stones like Amethyst, Turquoise, Moonstone,
+                Opal, Garnet, Citrine, Aquamarine, and many more.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="50">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide certification for gemstones?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we provide proper certification and documentation for all gemstones. Certificates can be arranged
+                from recognised gemological laboratories to ensure complete authenticity and buyer confidence.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="100">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can you handle international orders and shipping?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. We have 30+ years of experience working with national and international clients. We handle
+                all export documentation, customs clearance, and secure worldwide shipping to ensure your stones arrive
+                safely.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="150">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you accept bulk or wholesale orders?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we specialise in bulk and wholesale supply for jewellery manufacturers, retailers, and exporters.
+                We offer competitive pricing, consistent quality, and flexible payment terms for large orders.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="200">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can you provide custom-cut or calibrated stones?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we offer custom gemstone solutions including specific cuts, calibrations, matched sets, and stones
+                tailored to your jewellery design requirements. Contact us with your specifications and we will deliver
+                exactly what you need.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="250">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can I contact Ramam Gems?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>You can reach us by phone at <a href="tel:+919829071015">+91 98290 71015</a>, by email at <a
+                  href="mailto:gemsstone121@gmail.com">gemsstone121@gmail.com</a>, or visit us at C-106, Goverdhanpuri,
+                Galta Gate, Jaipur, Rajasthan – 302003. You can also use the contact form below or WhatsApp us directly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="300">
+            <button class="faq-question" aria-expanded="false">
+              <span>What are your business hours?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We are open Monday to Saturday, 10:00 AM – 7:00 PM IST. For urgent international enquiries, please
+                WhatsApp us and we will respond at the earliest.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal-up" data-delay="350">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you supply astrological or jyotish gemstones?</span>
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we have a dedicated collection of astrological (Jyotish) gemstones sourced for their energetic and
+                astrological properties. All our astrological stones are natural, untreated, and of high quality
+                suitable for astrological use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════ -->
+    <section id="contact" class="section contact dark-section" aria-label="Contact Ramam Gems">
+      <div class="container">
+        <div class="section-label reveal-up"><i class="fas fa-envelope"></i> Get In Touch</div>
+        <h2 class="section-title reveal-up">Contact <span class="text-gold">Ramam Gems</span></h2>
+        <div class="section-divider reveal-up"></div>
+        <p class="section-subtitle reveal-up">Fill the form below — your enquiry will be sent directly to us via
+          WhatsApp.</p>
+
+        <div class="contact-grid">
+          <!-- Info panel -->
+          <div class="contact-info reveal-left">
+            <div class="contact-info-card glass-card">
+              <h3 class="contact-info-title">Our Details</h3>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="contact-detail-body">
+                  <strong>Owner</strong>
+                  <span>Murari Lal Sharma</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon phone-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-detail-body">
+                  <strong>Phone</strong>
+                  <a href="tel:+919829071015">+91 98290 71015</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon email-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-detail-body">
+                  <strong>Email</strong>
+                  <a href="mailto:gemsstone121@gmail.com">gemsstone121@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon map-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-detail-body">
+                  <strong>Address</strong>
+                  <span>C-106, Goverdhanpuri, Galta Gate,<br />Jaipur, Rajasthan – 302003</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon clock-icon"><i class="fas fa-clock"></i></div>
+                <div class="contact-detail-body">
+                  <strong>Business Hours</strong>
+                  <span>Mon – Sat: 10:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-social">
+                <a href="https://wa.me/919829071015" target="_blank" rel="noopener noreferrer"
+                  class="csocial-link whatsapp-link" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="csocial-link facebook-link" aria-label="Facebook" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="csocial-link instagram-link" aria-label="Instagram" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="csocial-link linkedin-link" aria-label="LinkedIn" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="csocial-link youtube-link" aria-label="YouTube" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap reveal-right">
+            <form class="contact-form glass-card" id="contactForm" novalidate aria-label="Contact form">
+              <h3 class="form-title"><i class="fab fa-whatsapp"></i> Send Enquiry via WhatsApp</h3>
+              <p class="form-note">Fill the form — your message opens in WhatsApp for instant delivery.</p>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cf-name">Full Name <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="cf-name" name="name" placeholder="Your full name" required
+                      autocomplete="name" />
+                  </div>
+                  <span class="field-error" id="err-name"></span>
+                </div>
+                <div class="form-field">
+                  <label for="cf-phone">Phone Number <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fas fa-phone input-icon"></i>
+                    <input type="tel" id="cf-phone" name="phone" placeholder="+91 XXXXXXXXXX" required
+                      autocomplete="tel" />
+                  </div>
+                  <span class="field-error" id="err-phone"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cf-email">Email Address</label>
+                  <div class="input-wrap">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" autocomplete="email" />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="cf-city">City <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fas fa-city input-icon"></i>
+                    <input type="text" id="cf-city" name="city" placeholder="Your city" required
+                      autocomplete="address-level2" />
+                  </div>
+                  <span class="field-error" id="err-city"></span>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="cf-interest">Interested In <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-gem input-icon"></i>
+                  <select id="cf-interest" name="interest" required>
+                    <option value="">Select gemstone type or service</option>
+                    <option value="Precious Gemstones">Precious Gemstones</option>
+                    <option value="Semi-Precious Gemstones">Semi-Precious Gemstones</option>
+                    <option value="Custom Stone Solutions">Custom Stone Solutions</option>
+                    <option value="Bulk Orders">Bulk Orders</option>
+                    <option value="International Supply">International Supply</option>
+                    <option value="Astrological Gemstones">Astrological Gemstones</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <span class="field-error" id="err-interest"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="cf-message">Message <span class="req">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fas fa-comment-dots input-icon textarea-icon"></i>
+                  <textarea id="cf-message" name="message" rows="5"
+                    placeholder="Describe your gemstone requirement in detail..." required></textarea>
+                </div>
+                <span class="field-error" id="err-message"></span>
+              </div>
+
+              <button type="submit" class="btn-whatsapp-submit ripple" id="formSubmitBtn">
+                <i class="fab fa-whatsapp"></i>
+                <span>Send via WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-section reveal-up">
+          <div class="map-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Find Us — Ramam Gems, Jaipur</h3>
+          </div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7115.257019500384!2d75.84770733760935!3d26.915282579541287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db7300a828bb7%3A0xcef451de05ca3543!2sRamam%20Gems!5e0!3m2!1sen!2sin!4v1783536688765!5m2!1sen!2sin"
+              width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin" title="Ramam Gems location on Google Maps"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="container footer-grid">
+
+          <div class="footer-brand">
+            <img src="logo/logo.png" alt="Ramam Gems" class="footer-logo" loading="lazy" />
+            <p class="footer-desc">30+ Years of Excellence in Precious &amp; Semi-Precious Gemstones. Trusted by
+              national and international clients since 1990.</p>
+            <div class="footer-social" id="footerSocial">
+              <a href="https://wa.me/919829071015" class="fsocial-link whatsapp" target="_blank"
+                rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" class="fsocial-link facebook" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="fsocial-link instagram" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="fsocial-link linkedin" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="fsocial-link youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                  class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home"><i class="fas fa-chevron-right"></i>Home</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+              <li><a href="#products"><i class="fas fa-chevron-right"></i>Products</a></li>
+              <li><a href="#why-us"><i class="fas fa-chevron-right"></i>Why Choose Us</a></li>
+              <li><a href="#gallery"><i class="fas fa-chevron-right"></i>Gallery</a></li>
+              <li><a href="#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i>Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Our Products</h4>
+            <ul class="footer-links">
+              <li><a href="#products"><i class="fas fa-gem"></i>Precious Gemstones</a></li>
+              <li><a href="#products"><i class="fas fa-gem"></i>Semi-Precious Stones</a></li>
+              <li><a href="#products"><i class="fas fa-cut"></i>Custom Stone Solutions</a></li>
+              <li><a href="#products"><i class="fas fa-boxes-stacked"></i>Bulk Orders</a></li>
+              <li><a href="#products"><i class="fas fa-globe"></i>International Supply</a></li>
+              <li><a href="#products"><i class="fas fa-star"></i>Astrological Gems</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Contact Info</h4>
+            <div class="footer-contact-list">
+              <div class="footer-contact-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Murari Lal Sharma</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+919829071015">+91 98290 71015</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:gemsstone121@gmail.com">gemsstone121@gmail.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>C-106, Goverdhanpuri, Galta Gate,<br />Jaipur, Rajasthan – 302003</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon–Sat: 10:00 AM – 7:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="footerYear"></span> Ramam Gems. All Rights Reserved.</p>
+          <p>Crafted with <i class="fas fa-heart" style="color:#D4AF37"></i> for Murari Lal Sharma &amp; Family · Jaipur
+          </p>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer>
-    <span class="seg">Ramam Gems<span class="dot"></span><span id="year"></span></span>
-    <span class="seg">Precious &amp; Semi‑Precious Cut Stones<span class="dot"></span>Jaipur, India</span>
-  </footer>
+  <!-- ═══════════════════════════════════════
+     FLOATING ACTION BUTTONS
+═══════════════════════════════════════ -->
+  <div class="fab-container" id="fabContainer" aria-label="Quick action buttons">
 
-</div>
+    <a href="tel:+919829071015" class="fab fab-call" id="fabCall" aria-label="Call Now" data-tooltip="Call Now">
+      <i class="fas fa-phone-alt"></i>
+    </a>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+    <a href="https://wa.me/919829071015" target="_blank" rel="noopener noreferrer" class="fab fab-whatsapp"
+      id="fabWhatsApp" aria-label="Chat on WhatsApp" data-tooltip="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="fab-pulse"></span>
+    </a>
 
-  // copy phone number
-  (function(){
-    var btn = document.getElementById('copyBtn');
-    var num = document.getElementById('phoneNum');
-    if(!btn) return;
-    btn.addEventListener('click', function(){
-      var text = num.textContent.trim();
-      var done = function(){
-        var original = btn.textContent;
-        btn.textContent = 'Copied';
-        setTimeout(function(){ btn.textContent = original; }, 1600);
-      };
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(done).catch(function(){
-          fallbackCopy(text, done);
-        });
-      } else {
-        fallbackCopy(text, done);
-      }
-    });
-    function fallbackCopy(text, cb){
-      var ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); } catch(e){}
-      document.body.removeChild(ta);
-      cb();
-    }
-  })();
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Ramam+Gems+C-106+Goverdhanpuri+Galta+Gate+Jaipur+Rajasthan+302003"
+      target="_blank" rel="noopener noreferrer" class="fab fab-location" id="fabLocation" aria-label="Get Directions"
+      data-tooltip="Get Directions">
+      <i class="fas fa-map-marker-alt"></i>
+    </a>
 
-  // gentle mouse-parallax tilt on the gem (desktop, fine pointer, motion allowed)
-  (function(){
-    var stage = document.querySelector('.gem-stage');
-    var tilt = document.getElementById(
+  </div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
